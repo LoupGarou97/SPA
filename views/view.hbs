@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>просмотр</title>
+</head>
+<body>
+    <h1>Информация</h1>
+    <form action="/view" method="GET">
+        <table>
+        <tr>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Midle name</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+        {{#each user}}
+        <tr>
+            <td>{{this.FirstName}}</td>
+            <td>{{this.LastName}}</td>
+            <td>{{this.MidleName}}</td>
+            <td>{{this.Age}}</td>
+            <td>{{this.Email}}</td>
+            <td>{{this.Phone}}</td>
+        </tr>
+        {{/each}}
+    </table>
+    </form>
+    <a href="/">К списку</a>
+</body>
+</html>

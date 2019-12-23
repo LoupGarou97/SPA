@@ -29,6 +29,19 @@ app.get("/", function(req, res){
   });
 });
 
+app.get("/view/:ID", function(req, res) {
+  const id = req.params.ID;
+  pool.query("SELECT * FROM user WHERE ID=?", [id], function(err, data) {
+    if(err) {
+      return console.log(err);
+    } else {
+     res.render("view.hbs", {
+        user: data
+      });
+    }
+  });
+});
+
 app.get("/create", function(req, res) {
   res.render("create.hbs");
 });

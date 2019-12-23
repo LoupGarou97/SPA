@@ -12,20 +12,21 @@
         <tr>
             <th>First name</th>
             <th>Last name</th>
-            <th>Midle name</th>
+            {{!-- <th>Midle name</th>
             <th>Age</th>
             <th>Email</th>
-            <th>Phone</th>
+            <th>Phone</th> --}}
         </tr>
         {{#each user}}
         <tr>
             <td>{{this.FirstName}}</td>
             <td>{{this.LastName}}</td>
-            <td>{{this.MidleName}}</td>
+            {{!-- <td>{{this.MidleName}}</td>
             <td>{{this.Age}}</td>
             <td>{{this.Email}}</td>
-            <td>{{this.Phone}}</td>
+            <td>{{this.Phone}}</td> --}}
             <td>
+                <a href="/view/{{this.ID}}">View</a>
                 <a href="/edit/{{this.ID}}">Edit</a>
                 <form action="delete/{{this.ID}}" method="POST" style="display: inline;">
                     <input type="submit" value="Delete" />
