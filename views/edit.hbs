@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Редоктирование</title>
+</head>
+<body>
+    <h1>Редоктирование</h1>
+    <form action="/edit" method="POST">
+        <input type="hidden" name="ID" value="{{user.ID}}" />
+        <label>Имя</label><br>
+        <input name="FirstName" value="{{user.FirstName}}" class="field" /><br><br>
+        <label>Фамилия</label><br>
+        <input name="LastName" value="{{user.LastName}}" class="field" /><br><br>
+        <label>Отчество</label><br>
+        <input name="MidleName" value="{{user.MidleName}}" class="field" /><br><br>
+        <label>Возраст</label><br>
+        <input name="Age" type="number" value="{{user.Age}}" class="field" /><br><br>
+        <label>Почта</label><br>
+        <input name="Email" type="email" value="{{user.Email}}" class="field" /><br><br>
+        <label>Телефон</label><br>
+        <input name="Phone" value="{{user.Phone}}" class="field" /><br><br>
+        <input type="submit" value="Отправить" />
+    </form>
+    <a href="/"> К списку</a>
+</body>
+</html>
